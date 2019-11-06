@@ -422,14 +422,14 @@ function minikube_prereq() {
 	kruize_ns="monitoring"
 	kubectl_cmd="kubectl -n ${kruize_ns}"
 
-	echo "Info: kruize needs cadvisor/prometheus/grafana to be installed in minikube"
-	echo -n "Download and install these software to minikube(y/n)? "
-	read inst
-	linst=$(echo ${inst} | tr A-Z a-z)
-	if [ ${linst} == "n" ]; then
-		echo "Info: kruize not installed"
-		exit 0
-	fi
+#	echo "Info: kruize needs cadvisor/prometheus/grafana to be installed in minikube"
+#	echo -n "Download and install these software to minikube(y/n)? "
+#	read inst
+#	linst=$(echo ${inst} | tr A-Z a-z)
+#	if [ ${linst} == "n" ]; then
+#		echo "Info: kruize not installed"
+#		exit 0
+#	fi
 
 	mkdir minikube_downloads 2>/dev/null
 	pushd minikube_downloads >/dev/null
